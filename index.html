@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="index.css">
+    <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootElem=document.querySelector('#root')
+       const root=ReactDOM.createRoot(rootElem)
+
+       function Paragraph(){
+        return(
+<div id="main">
+  <h1>topics covered</h1>
+  <p>
+    The following is a list of all the topics we cover in he MDN learning area
+    </p><br/>
+    <a href="#">getting started with the web</a>
+    <p>
+     provide a practical introduction to web development for complete beginners
+      </p><br/>
+      <a href="#">HTML_ Structuring the web</a>
+      <p>HTML is the language that we use to structire the diffrent parts of our content and define what their meaning or purpose is .this topic teaches HTML in detail</p>
+      <br/>
+      <a href="#">Css-Styling the web</a>
+      <p>Css is the language that we use to control our web content style and layout, as well as adding behaviour like animation .This topic provides comphrenensive coverage of CSS</p>
+  </div>
+
+        )
+       }
+     
+
+      root.render(<Paragraph/>);
+  </script>
+</body>
+</html>
